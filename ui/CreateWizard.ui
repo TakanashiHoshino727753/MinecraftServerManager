@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CreateWizard</class>
+ <widget class="QWidget" name="CreateWizard">
+  <layout class="QVBoxLayout" name="rootLayout">
+   <property name="spacing"><number>0</number></property>
+   <property name="leftMargin"><number>24</number></property>
+   <property name="topMargin"><number>20</number></property>
+   <property name="rightMargin"><number>24</number></property>
+   <property name="bottomMargin"><number>16</number></property>
+   <item>
+    <widget class="QLabel" name="title">
+     <property name="text"><string>创建服务器</string></property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="subtitle">
+     <property name="text"><string>全自动部署，只需几步即可完成</string></property>
+    </widget>
+   </item>
+   <item><spacer name="titleSpacer"><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeType"><enum>QSizePolicy::Fixed</enum></property><property name="sizeHint"><size><width>0</width><height>20</height></size></property></spacer></item>
+   <item>
+    <!-- Step indicator area (placeholder, populated in code) -->
+    <widget class="QWidget" name="stepIndicator">
+     <layout class="QHBoxLayout" name="stepIndicatorLayout">
+      <property name="spacing"><number>0</number></property>
+      <property name="leftMargin"><number>0</number></property>
+      <property name="topMargin"><number>0</number></property>
+      <property name="rightMargin"><number>0</number></property>
+      <property name="bottomMargin"><number>0</number></property>
+     </layout>
+    </widget>
+   </item>
+   <item><spacer name="stepSpacer"><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeType"><enum>QSizePolicy::Fixed</enum></property><property name="sizeHint"><size><width>0</width><height>20</height></size></property></spacer></item>
+   <item>
+    <!-- Scroll area for step content -->
+    <widget class="QScrollArea" name="scrollArea">
+     <property name="widgetResizable"><bool>true</bool></property>
+     <property name="horizontalScrollBarPolicy"><enum>Qt::ScrollBarAlwaysOff</enum></property>
+     <widget class="QStackedWidget" name="stepStack">
+      <widget class="QWidget" name="stepPage1"/>
+      <widget class="QWidget" name="stepPage2"/>
+      <widget class="QWidget" name="stepPage3"/>
+      <widget class="QWidget" name="stepPage4"/>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <!-- Error label -->
+    <widget class="QLabel" name="errorLabel">
+     <property name="text"><string></string></property>
+     <property name="wordWrap"><bool>true</bool></property>
+    </widget>
+   </item>
+   <item>
+    <!-- Progress area -->
+    <widget class="QWidget" name="progressArea">
+     <layout class="QVBoxLayout" name="progressLayout">
+      <property name="spacing"><number>0</number></property>
+      <property name="leftMargin"><number>0</number></property>
+      <property name="topMargin"><number>4</number></property>
+      <property name="rightMargin"><number>0</number></property>
+      <property name="bottomMargin"><number>4</number></property>
+      <item>
+       <widget class="QLabel" name="progressLabel"><property name="text"><string></string></property></widget>
+      </item>
+      <item>
+       <widget class="QProgressBar" name="progress">
+        <property name="value"><number>0</number></property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item><spacer name="navSpacer"><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeType"><enum>QSizePolicy::Fixed</enum></property><property name="sizeHint"><size><width>0</width><height>12</height></size></property></spacer></item>
+   <item>
+    <!-- Navigation buttons -->
+    <layout class="QHBoxLayout" name="navLayout">
+     <property name="spacing"><number>12</number></property>
+     <item>
+      <widget class="QPushButton" name="cancelBtn"><property name="text"><string>取消</string></property></widget>
+     </item>
+     <item><spacer name="navStretch"><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeHint"><size><width>40</width><height>20</height></size></property></spacer></item>
+     <item>
+      <widget class="QPushButton" name="prevBtn"><property name="text"><string>上一步</string></property></widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="nextBtn">
+       <property name="text"><string>下一步</string></property>
+       <property name="minimumSize"><size><width>0</width><height>40</height></size></property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+</ui>

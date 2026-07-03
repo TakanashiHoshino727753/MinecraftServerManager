@@ -1,0 +1,14 @@
+<RCC>
+  <qresource prefix="/">
+    <!-- 标题栏按钮 -->
+    <file>icons/minus.svg</file>
+    <file>icons/square.svg</file>
+    <file>icons/restore.svg</file>
+    <file>icons/x.svg</file>
+    <!-- 侧栏 / 卡片 -->
+    <file>icons/gear.svg</file>
+    <file>icons/chevron_right.svg</file>
+    <!-- 程序 / 托盘 -->
+    <file>icons/app.svg</file>
+  </qresource>
+</RCC>

@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SettingsDialog</class>
+ <widget class="QDialog" name="SettingsDialog">
+  <property name="minimumSize"><size><width>550</width><height>480</height></size></property>
+  <property name="windowTitle"><string notr="true">Settings</string></property>
+  <layout class="QVBoxLayout" name="rootLayout">
+   <property name="leftMargin"><number>0</number></property>
+   <property name="topMargin"><number>0</number></property>
+   <property name="rightMargin"><number>0</number></property>
+   <property name="bottomMargin"><number>0</number></property>
+   <property name="spacing"><number>0</number></property>
+   <item>
+    <widget class="QLabel" name="titleLabel">
+     <property name="styleSheet"><string notr="true">font-size: 22px; font-weight: bold; color: #a29bfe; padding: 12px 20px 8px 20px;</string></property>
+     <property name="text"><string notr="true">Settings</string></property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="styleSheet"><string notr="true">QTabWidget::pane { border: 1px solid #2a2a4a; border-radius: 8px; background: #0e0e1a; }
+QTabBar::tab { background: transparent; border: none; color: #8888aa; padding: 10px 20px; font-size: 13px; border-bottom: 2px solid transparent; }
+QTabBar::tab:selected { color: #a29bfe; border-bottom: 2px solid #6c5ce7; }
+QTabBar::tab:hover { color: #e0e0f0; }</string></property>
+     <property name="currentIndex"><number>0</number></property>
+     <!-- General Tab -->
+     <widget class="QWidget" name="generalTab">
+      <attribute name="title"><string>General</string></attribute>
+      <layout class="QVBoxLayout" name="generalTabLayout">
+       <property name="leftMargin"><number>0</number></property>
+       <property name="topMargin"><number>0</number></property>
+       <property name="rightMargin"><number>0</number></property>
+       <property name="bottomMargin"><number>0</number></property>
+       <item>
+        <widget class="QScrollArea" name="genScroll">
+         <property name="frameShape"><enum>QFrame::NoFrame</enum></property>
+         <property name="widgetResizable"><bool>true</bool></property>
+         <property name="styleSheet"><string notr="true">QScrollArea { background: transparent; border: none; }
+QScrollBar:vertical { background: #0e0e1a; width: 8px; }
+QScrollBar::handle:vertical { background: #3a3a5a; border-radius: 4px; min-height: 30px; }
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical { height: 0; }
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical { background: none; }</string></property>
+         <widget class="QWidget" name="genPage">
+          <property name="geometry"><rect><x>0</x><y>0</y><width>530</width><height>380</height></rect></property>
+          <layout class="QVBoxLayout" name="genPageLayout">
+           <property name="leftMargin"><number>20</number></property>
+           <property name="topMargin"><number>16</number></property>
+           <property name="rightMargin"><number>20</number></property>
+           <property name="bottomMargin"><number>16</number></property>
+           <property name="spacing"><number>16</number></property>
+           <item>
+            <widget class="QGroupBox" name="startupGroup">
+             <property name="styleSheet"><string notr="true">QGroupBox { border: 1px solid #2a2a4a; border-radius: 10px; margin-top: 12px; padding: 20px 16px 12px 16px; font-weight: bold; color: #a29bfe; }
+QGroupBox::title { subcontrol-origin: margin; left: 16px; padding: 0 6px; }</string></property>
+             <property name="title"><string>Startup</string></property>
+             <layout class="QVBoxLayout" name="startupLayout">
+              <property name="spacing"><number>8</number></property>
+              <item>
+               <widget class="QCheckBox" name="autoStartCheck">
+                <property name="styleSheet"><string notr="true">QCheckBox { color: #e0e0f0; font-size: 14px; spacing: 10px; }</string></property>
+                <property name="text"><string>Auto Start</string></property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="autoHint">
+                <property name="styleSheet"><string notr="true">color: #8888aa; font-size: 12px; margin-left: 28px;</string></property>
+                <property name="text"><string>Hint</string></property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item><spacer name="genSpacer"><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeHint"><size><width>20</width><height>40</height></size></property></spacer></item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <!-- Language Tab -->
+     <widget class="QWidget" name="languageTab">
+      <attribute name="title"><string>Language</string></attribute>
+      <layout class="QVBoxLayout" name="langTabLayout">
+       <property name="leftMargin"><number>0</number></property>
+       <property name="topMargin"><number>0</number></property>
+       <property name="rightMargin"><number>0</number></property>
+       <property name="bottomMargin"><number>0</number></property>
+       <item>
+        <widget class="QScrollArea" name="langScroll">
+         <property name="frameShape"><enum>QFrame::NoFrame</enum></property>
+         <property name="widgetResizable"><bool>true</bool></property>
+         <property name="styleSheet"><string notr="true">QScrollArea { background: transparent; border: none; }
+QScrollBar:vertical { background: #0e0e1a; width: 8px; }
+QScrollBar::handle:vertical { background: #3a3a5a; border-radius: 4px; min-height: 30px; }
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical { height: 0; }
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical { background: none; }</string></property>
+         <widget class="QWidget" name="langPage">
+          <property name="geometry"><rect><x>0</x><y>0</y><width>530</width><height>380</height></rect></property>
+          <layout class="QVBoxLayout" name="langPageLayout">
+           <property name="leftMargin"><number>20</number></property>
+           <property name="topMargin"><number>16</number></property>
+           <property name="rightMargin"><number>20</number></property>
+           <property name="bottomMargin"><number>16</number></property>
+           <property name="spacing"><number>16</number></property>
+           <item>
+            <widget class="QGroupBox" name="appLangGroup">
+             <property name="styleSheet"><string notr="true">QGroupBox { border: 1px solid #2a2a4a; border-radius: 10px; margin-top: 12px; padding: 20px 16px 12px 16px; font-weight: bold; color: #a29bfe; }
+QGroupBox::title { subcontrol-origin: margin; left: 16px; padding: 0 6px; }</string></property>
+             <property name="title"><string>App Language</string></property>
+             <layout class="QFormLayout" name="appLangFormLayout">
+              <property name="spacing"><number>10</number></property>
+              <property name="labelAlignment"><set>Qt::AlignRight|Qt::AlignVCenter</set></property>
+              <item row="0" column="0">
+               <widget class="QLabel" name="langLabel">
+                <property name="text"><string>Language:</string></property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QComboBox" name="langCombo">
+                <property name="styleSheet"><string notr="true">QComboBox { background: #0a0a16; border: 1px solid #2a2a4a; border-radius: 6px; color: #e0e0f0; padding: 6px 12px; font-size: 13px; }
+QComboBox::drop-down { border: none; width: 24px; }
+QComboBox QAbstractItemView { background: #12121e; border: 1px solid #2a2a4a; color: #e0e0f0; selection-background-color: rgba(108,92,231,0.3); }</string></property>
+                <property name="fixedWidth"><number>200</number></property>
+               </widget>
+              </item>
+              <item row="1" column="0"><widget class="QLabel" name="langHintBlank"><property name="text"><string></string></property></widget></item>
+              <item row="1" column="1">
+               <widget class="QLabel" name="langHint">
+                <property name="styleSheet"><string notr="true">color: #8888aa; font-size: 11px; margin-left: 4px;</string></property>
+                <property name="text"><string>Restart required</string></property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="webUIGroup">
+             <property name="styleSheet"><string notr="true">QGroupBox { border: 1px solid #2a2a4a; border-radius: 10px; margin-top: 12px; padding: 20px 16px 12px 16px; font-weight: bold; color: #22d3ee; }
+QGroupBox::title { subcontrol-origin: margin; left: 16px; padding: 0 6px; }</string></property>
+             <property name="title"><string>WebUI Language</string></property>
+             <layout class="QVBoxLayout" name="webUILayout">
+              <property name="spacing"><number>10</number></property>
+              <item>
+               <widget class="QRadioButton" name="webUIFollowRadio">
+                <property name="styleSheet"><string notr="true">QRadioButton { color: #e0e0f0; font-size: 13px; spacing: 8px; }</string></property>
+                <property name="text"><string>Follow Launcher</string></property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="webUIManualRadio">
+                <property name="styleSheet"><string notr="true">QRadioButton { color: #e0e0f0; font-size: 13px; spacing: 8px; }</string></property>
+                <property name="text"><string>Set Manually</string></property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="manualRow">
+                <property name="spacing"><number>8</number></property>
+                <item>
+                 <widget class="QLabel" name="manualLabel">
+                  <property name="styleSheet"><string notr="true">color: #8888aa; font-size: 13px;</string></property>
+                  <property name="text"><string>Language:</string></property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="webUILangCombo">
+                  <property name="styleSheet"><string notr="true">QComboBox { background: #0a0a16; border: 1px solid #2a2a4a; border-radius: 6px; color: #e0e0f0; padding: 6px 12px; font-size: 13px; }
+QComboBox::drop-down { border: none; width: 24px; }
+QComboBox QAbstractItemView { background: #12121e; border: 1px solid #2a2a4a; color: #e0e0f0; selection-background-color: rgba(34,211,238,0.3); }</string></property>
+                  <property name="fixedWidth"><number>180</number></property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item><spacer name="langSpacer"><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeHint"><size><width>20</width><height>40</height></size></property></spacer></item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <!-- Theme Tab -->
+     <widget class="QWidget" name="themeTab">
+      <attribute name="title"><string>Theme</string></attribute>
+      <layout class="QVBoxLayout" name="themeTabLayout">
+       <property name="leftMargin"><number>0</number></property>
+       <property name="topMargin"><number>0</number></property>
+       <property name="rightMargin"><number>0</number></property>
+       <property name="bottomMargin"><number>0</number></property>
+       <item>
+        <widget class="QScrollArea" name="themeScroll">
+         <property name="frameShape"><enum>QFrame::NoFrame</enum></property>
+         <property name="widgetResizable"><bool>true</bool></property>
+         <property name="styleSheet"><string notr="true">QScrollArea { background: transparent; border: none; }
+QScrollBar:vertical { background: #0e0e1a; width: 8px; }
+QScrollBar::handle:vertical { background: #3a3a5a; border-radius: 4px; min-height: 30px; }
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical { height: 0; }
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical { background: none; }</string></property>
+         <widget class="QWidget" name="themePage">
+          <property name="geometry"><rect><x>0</x><y>0</y><width>530</width><height>380</height></rect></property>
+          <layout class="QVBoxLayout" name="themePageLayout">
+           <property name="leftMargin"><number>20</number></property>
+           <property name="topMargin"><number>16</number></property>
+           <property name="rightMargin"><number>20</number></property>
+           <property name="bottomMargin"><number>16</number></property>
+           <property name="spacing"><number>16</number></property>
+           <item>
+            <widget class="QGroupBox" name="accentGroup">
+             <property name="styleSheet"><string notr="true">QGroupBox { border: 1px solid #2a2a4a; border-radius: 10px; margin-top: 12px; padding: 20px 16px 12px 16px; font-weight: bold; color: #a29bfe; }
+QGroupBox::title { subcontrol-origin: margin; left: 16px; padding: 0 6px; }</string></property>
+             <property name="title"><string>Accent Color</string></property>
+             <layout class="QVBoxLayout" name="accentLayout">
+              <property name="spacing"><number>10</number></property>
+              <item>
+               <layout class="QHBoxLayout" name="accentRow">
+                <item><widget class="QLabel" name="accentLabel"><property name="text"><string>Color:</string></property></widget></item>
+                <item>
+                 <widget class="QComboBox" name="accentCombo">
+                  <property name="styleSheet"><string notr="true">QComboBox { background: #0a0a16; border: 1px solid #2a2a4a; border-radius: 6px; color: #e0e0f0; padding: 6px 12px; font-size: 13px; }
+QComboBox::drop-down { border: none; width: 24px; }
+QComboBox QAbstractItemView { background: #12121e; border: 1px solid #2a2a4a; color: #e0e0f0; selection-background-color: rgba(108,92,231,0.3); }</string></property>
+                  <property name="fixedWidth"><number>220</number></property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="colorPreview">
+                  <property name="fixedSize"><size><width>28</width><height>28</height></size></property>
+                  <property name="styleSheet"><string notr="true">background: #6c5ce7; border-radius: 14px; border: 2px solid rgba(255,255,255,0.2);</string></property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="bgGroup">
+             <property name="styleSheet"><string notr="true">QGroupBox { border: 1px solid #2a2a4a; border-radius: 10px; margin-top: 12px; padding: 20px 16px 12px 16px; font-weight: bold; color: #a29bfe; }
+QGroupBox::title { subcontrol-origin: margin; left: 16px; padding: 0 6px; }</string></property>
+             <property name="title"><string>Background Image</string></property>
+             <layout class="QVBoxLayout" name="bgLayout">
+              <property name="spacing"><number>10</number></property>
+              <item>
+               <widget class="QComboBox" name="bgStyleCombo">
+                <property name="styleSheet"><string notr="true">QComboBox { background: #0a0a16; border: 1px solid #2a2a4a; border-radius: 6px; color: #e0e0f0; padding: 6px 12px; font-size: 13px; }
+QComboBox::drop-down { border: none; width: 24px; }
+QComboBox QAbstractItemView { background: #12121e; border: 1px solid #2a2a4a; color: #e0e0f0; selection-background-color: rgba(108,92,231,0.3); }</string></property>
+                <property name="fixedWidth"><number>220</number></property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="customBgRow">
+                <item>
+                 <widget class="QPushButton" name="customBgBtn">
+                  <property name="objectName"><string>ghostBtn</string></property>
+                  <property name="text"><string>Choose Background</string></property>
+                  <property name="fixedWidth"><number>160</number></property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="bgPreviewLabel">
+                  <property name="styleSheet"><string notr="true">color: #8888aa; font-size: 12px;</string></property>
+                  <property name="text"><string>No background selected</string></property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="themeHint">
+             <property name="styleSheet"><string notr="true">color: #8888aa; font-size: 12px; padding: 4px 0;</string></property>
+             <property name="wordWrap"><bool>true</bool></property>
+             <property name="text"><string>Theme hint</string></property>
+            </widget>
+           </item>
+           <item><spacer name="themeSpacer"><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeHint"><size><width>20</width><height>40</height></size></property></spacer></item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <!-- Web API Tab -->
+     <widget class="QWidget" name="webApiTab">
+      <attribute name="title"><string>Web API</string></attribute>
+      <layout class="QVBoxLayout" name="apiTabLayout">
+       <property name="leftMargin"><number>0</number></property>
+       <property name="topMargin"><number>0</number></property>
+       <property name="rightMargin"><number>0</number></property>
+       <property name="bottomMargin"><number>0</number></property>
+       <item>
+        <widget class="QScrollArea" name="apiScroll">
+         <property name="frameShape"><enum>QFrame::NoFrame</enum></property>
+         <property name="widgetResizable"><bool>true</bool></property>
+         <property name="styleSheet"><string notr="true">QScrollArea { background: transparent; border: none; }
+QScrollBar:vertical { background: #0e0e1a; width: 8px; }
+QScrollBar::handle:vertical { background: #3a3a5a; border-radius: 4px; min-height: 30px; }
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical { height: 0; }
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical { background: none; }</string></property>
+         <widget class="QWidget" name="apiPage">
+          <property name="geometry"><rect><x>0</x><y>0</y><width>530</width><height>380</height></rect></property>
+          <layout class="QVBoxLayout" name="apiPageLayout">
+           <property name="leftMargin"><number>20</number></property>
+           <property name="topMargin"><number>16</number></property>
+           <property name="rightMargin"><number>20</number></property>
+           <property name="bottomMargin"><number>16</number></property>
+           <property name="spacing"><number>16</number></property>
+           <item>
+            <widget class="QGroupBox" name="apiGroup">
+             <property name="styleSheet"><string notr="true">QGroupBox { border: 1px solid #2a2a4a; border-radius: 10px; margin-top: 12px; padding: 20px 16px 12px 16px; font-weight: bold; color: #a29bfe; }
+QGroupBox::title { subcontrol-origin: margin; left: 16px; padding: 0 6px; }</string></property>
+             <property name="title"><string>Web API</string></property>
+             <layout class="QFormLayout" name="apiFormLayout">
+              <property name="spacing"><number>10</number></property>
+              <property name="labelAlignment"><set>Qt::AlignRight|Qt::AlignVCenter</set></property>
+              <item row="0" column="0"><widget class="QLabel" name="apiBlank1"><property name="text"><string></string></property></widget></item>
+              <item row="0" column="1">
+               <widget class="QCheckBox" name="webApiEnableCheck">
+                <property name="styleSheet"><string notr="true">font-size: 14px; font-weight: bold;</string></property>
+                <property name="text"><string>Enable Web API</string></property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="portLabel">
+                <property name="styleSheet"><string notr="true">color: #8888aa; font-size: 13px;</string></property>
+                <property name="text"><string>Port:</string></property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QSpinBox" name="webApiPortSpin">
+                <property name="minimum"><number>1024</number></property>
+                <property name="maximum"><number>65535</number></property>
+                <property name="value"><number>25575</number></property>
+                <property name="fixedWidth"><number>120</number></property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="tokenLabel">
+                <property name="styleSheet"><string notr="true">color: #8888aa; font-size: 13px;</string></property>
+                <property name="text"><string>API Token:</string></property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <layout class="QHBoxLayout" name="tokenRow">
+                <item>
+                 <widget class="QLineEdit" name="webApiTokenEdit">
+                  <property name="echoMode"><enum>QLineEdit::Password</enum></property>
+                  <property name="minimumWidth"><number>200</number></property>
+                  <property name="placeholderText"><string>Generate token</string></property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="genBtn">
+                  <property name="objectName"><string>ghostBtn</string></property>
+                  <property name="text"><string>Generate</string></property>
+                  <property name="fixedWidth"><number>80</number></property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="urlLabel">
+                <property name="styleSheet"><string notr="true">color: #8888aa; font-size: 13px;</string></property>
+                <property name="text"><string>API URL:</string></property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <layout class="QHBoxLayout" name="urlRow">
+                <item>
+                 <widget class="QLabel" name="webApiUrlLabel">
+                  <property name="styleSheet"><string notr="true">color: #00d2a0; font-size: 13px; font-family: 'Consolas', monospace; background: #0a0a16; padding: 6px 10px; border-radius: 6px;</string></property>
+                  <property name="text"><string>http://localhost:25575</string></property>
+                  <property name="textInteractionFlags"><set>Qt::TextSelectableByMouse</set></property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="copyUrlBtn">
+                  <property name="objectName"><string>ghostBtn</string></property>
+                  <property name="text"><string>Copy</string></property>
+                  <property name="fixedWidth"><number>60</number></property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item row="4" column="0"><widget class="QLabel" name="apiBlank4"><property name="text"><string></string></property></widget></item>
+              <item row="4" column="1">
+               <widget class="QLabel" name="webApiStatusLabel">
+                <property name="styleSheet"><string notr="true">color: #8888aa; font-size: 12px; margin-top: 4px;</string></property>
+                <property name="text"><string>Server not running</string></property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="apiDesc">
+             <property name="styleSheet"><string notr="true">color: #8888aa; font-size: 12px; padding: 8px 0;</string></property>
+             <property name="wordWrap"><bool>true</bool></property>
+             <property name="text"><string>API Description</string></property>
+            </widget>
+           </item>
+           <item><spacer name="apiSpacer"><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeHint"><size><width>20</width><height>40</height></size></property></spacer></item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <!-- Bot Plugin Tab -->
+     <widget class="QWidget" name="pluginTab">
+      <attribute name="title"><string>Bot Plugin</string></attribute>
+      <layout class="QVBoxLayout" name="pluginTabLayout">
+       <property name="leftMargin"><number>0</number></property>
+       <property name="topMargin"><number>0</number></property>
+       <property name="rightMargin"><number>0</number></property>
+       <property name="bottomMargin"><number>0</number></property>
+       <item>
+        <widget class="QScrollArea" name="pluginScroll">
+         <property name="frameShape"><enum>QFrame::NoFrame</enum></property>
+         <property name="widgetResizable"><bool>true</bool></property>
+         <property name="styleSheet"><string notr="true">QScrollArea { background: transparent; border: none; }
+QScrollBar:vertical { background: #0e0e1a; width: 8px; }
+QScrollBar::handle:vertical { background: #3a3a5a; border-radius: 4px; min-height: 30px; }
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical { height: 0; }
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical { background: none; }</string></property>
+         <widget class="QWidget" name="pluginPage">
+          <property name="geometry"><rect><x>0</x><y>0</y><width>530</width><height>380</height></rect></property>
+          <layout class="QVBoxLayout" name="pluginPageLayout">
+           <property name="leftMargin"><number>20</number></property>
+           <property name="topMargin"><number>16</number></property>
+           <property name="rightMargin"><number>20</number></property>
+           <property name="bottomMargin"><number>16</number></property>
+           <property name="spacing"><number>12</number></property>
+           <item>
+            <widget class="QLabel" name="botTitle">
+             <property name="styleSheet"><string notr="true">font-size: 17px; font-weight: bold; color: #e0e0f0;</string></property>
+             <property name="text"><string>Bot Plugin</string></property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="botDesc">
+             <property name="styleSheet"><string notr="true">color: #8888aa; font-size: 13px;</string></property>
+             <property name="wordWrap"><bool>true</bool></property>
+             <property name="text"><string>Description</string></property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="cmdGroup">
+             <property name="styleSheet"><string notr="true">QGroupBox { border: 1px solid #2a2a4a; border-radius: 10px; margin-top: 12px; padding: 16px 16px 12px 16px; font-weight: bold; color: var(--accent2); }
+QGroupBox::title { subcontrol-origin: margin; left: 16px; padding: 0 6px; }</string></property>
+             <property name="title"><string>Command Endpoint</string></property>
+             <layout class="QVBoxLayout" name="cmdLayout">
+              <property name="spacing"><number>4</number></property>
+              <item>
+               <widget class="QLabel" name="cmdInfo">
+                <property name="styleSheet"><string notr="true">color: #8888aa; font-size: 12px; font-family: 'Consolas', monospace;</string></property>
+                <property name="wordWrap"><bool>true</bool></property>
+                <property name="text"><string>cmd info</string></property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="napcatGroup">
+             <property name="styleSheet"><string notr="true">QGroupBox { border: 1px solid #2a2a4a; border-radius: 10px; margin-top: 12px; padding: 16px 16px 12px 16px; font-weight: bold; color: #60a5fa; }
+QGroupBox::title { subcontrol-origin: margin; left: 16px; padding: 0 6px; }</string></property>
+             <property name="title"><string>NapCat</string></property>
+             <layout class="QVBoxLayout" name="napcatLayout">
+              <property name="spacing"><number>6</number></property>
+              <item>
+               <widget class="QLabel" name="napcatInfo">
+                <property name="styleSheet"><string notr="true">color: #8888aa; font-size: 12px; font-family: 'Consolas', monospace;</string></property>
+                <property name="wordWrap"><bool>true</bool></property>
+                <property name="text"><string>napcat info</string></property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="nbGroup">
+             <property name="styleSheet"><string notr="true">QGroupBox { border: 1px solid #2a2a4a; border-radius: 10px; margin-top: 12px; padding: 16px 16px 12px 16px; font-weight: bold; color: #22d3ee; }
+QGroupBox::title { subcontrol-origin: margin; left: 16px; padding: 0 6px; }</string></property>
+             <property name="title"><string>NoneBot</string></property>
+             <layout class="QVBoxLayout" name="nbLayout">
+              <property name="spacing"><number>6</number></property>
+              <item>
+               <widget class="QLabel" name="nbInfo">
+                <property name="styleSheet"><string notr="true">color: #8888aa; font-size: 12px; font-family: 'Consolas', monospace;</string></property>
+                <property name="wordWrap"><bool>true</bool></property>
+                <property name="text"><string>nonebot info</string></property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item><spacer name="pluginSpacer"><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeHint"><size><width>20</width><height>40</height></size></property></spacer></item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="btnRow">
+     <property name="leftMargin"><number>20</number></property>
+     <property name="topMargin"><number>12</number></property>
+     <property name="rightMargin"><number>20</number></property>
+     <property name="bottomMargin"><number>16</number></property>
+     <item><spacer name="btnSpacer"><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeHint"><size><width>40</width><height>20</height></size></property></spacer></item>
+     <item>
+      <widget class="QPushButton" name="cancelBtn">
+       <property name="objectName"><string>ghostBtn</string></property>
+       <property name="text"><string>Cancel</string></property>
+       <property name="fixedWidth"><number>100</number></property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="saveBtn">
+       <property name="objectName"><string>primaryBtn</string></property>
+       <property name="text"><string>Save</string></property>
+       <property name="fixedWidth"><number>100</number></property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

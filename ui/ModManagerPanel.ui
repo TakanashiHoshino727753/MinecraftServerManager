@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ModManagerPanel</class>
+ <widget class="QWidget" name="ModManagerPanel">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>683</width>
+    <height>428</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="rootLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QScrollArea" name="scroll">
+     <property name="styleSheet">
+      <string notr="true">QScrollArea { background: transparent; border: none; }
+QScrollBar:vertical { background: #0e0e1a; width: 8px; }
+QScrollBar::handle:vertical { background: #3a3a5a; border-radius: 4px; }
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical { height: 0; }
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical { background: none; }</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Shape::NoFrame</enum>
+     </property>
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="page">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>675</width>
+        <height>627</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="pageLayout">
+       <property name="spacing">
+        <number>6</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>8</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="titleLabel">
+         <property name="styleSheet">
+          <string notr="true">font-size: 22px; font-weight: bold; color: #a29bfe; padding: 8px 20px 6px 20px;</string>
+         </property>
+         <property name="text">
+          <string notr="true">Mods</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="statusLabel">
+         <property name="styleSheet">
+          <string notr="true">color: #8888aa; font-size: 12px; padding: 4px 0;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="installedGroup">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>200</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QGroupBox { border: 1px solid #2a2a4a; border-radius: 10px; margin-top: 12px; padding: 20px 16px 12px 16px; font-weight: bold; color: #a29bfe; }
+QGroupBox::title { subcontrol-origin: margin; left: 16px; padding: 0 6px; }</string>
+         </property>
+         <property name="title">
+          <string notr="true">Installed Mods</string>
+         </property>
+         <layout class="QVBoxLayout" name="installedLayout">
+          <item>
+           <widget class="QTableWidget" name="modTable">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QTableWidget { background: #0a0a16; border: 1px solid #2a2a4a; border-radius: 8px; gridline-color: transparent; }
+QTableWidget::item { padding: 8px 12px; color: #e0e0f0; }
+QTableWidget::item:alternate { background: rgba(255,255,255,0.02); }
+QHeaderView::section { background: #12121e; color: #8888aa; border: none; padding: 8px 12px; font-size: 11px; font-weight: bold; }</string>
+            </property>
+            <property name="verticalScrollBarPolicy">
+             <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+            </property>
+            <property name="sizeAdjustPolicy">
+             <enum>QAbstractScrollArea::SizeAdjustPolicy::AdjustToContents</enum>
+            </property>
+            <property name="alternatingRowColors">
+             <bool>true</bool>
+            </property>
+            <property name="selectionMode">
+             <enum>QAbstractItemView::SelectionMode::SingleSelection</enum>
+            </property>
+            <property name="selectionBehavior">
+             <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
+            </property>
+            <property name="showGrid">
+             <bool>false</bool>
+            </property>
+            <property name="columnCount">
+             <number>5</number>
+            </property>
+            <attribute name="verticalHeaderVisible">
+             <bool>false</bool>
+            </attribute>
+            <column/>
+            <column/>
+            <column/>
+            <column/>
+            <column/>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="marketGroup">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>300</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QGroupBox { border: 1px solid #2a2a4a; border-radius: 10px; margin-top: 12px; padding: 20px 16px 12px 16px; font-weight: bold; color: #00d2a0; }
+QGroupBox::title { subcontrol-origin: margin; left: 16px; padding: 0 6px; }</string>
+         </property>
+         <property name="title">
+          <string notr="true">Modrinth Market</string>
+         </property>
+         <layout class="QVBoxLayout" name="marketLayout">
+          <property name="spacing">
+           <number>8</number>
+          </property>
+          <item>
+           <layout class="QHBoxLayout" name="mrSearchRow">
+            <item>
+             <widget class="QLineEdit" name="mrSearchInput">
+              <property name="placeholderText">
+               <string notr="true">Search Modrinth...</string>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLineEdit { padding: 6px 10px; background: #0a0a16; border: 1px solid #2a2a4a; border-radius: 6px; color: #e0e0f0; font-size: 12px; }
+QLineEdit:focus { border-color: #a29bfe; }</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="mrLoaderCombo">
+              <property name="minimumSize">
+               <size>
+                <width>80</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QComboBox { padding: 4px 8px; background: #0a0a16; border: 1px solid #2a2a4a; border-radius: 6px; color: #e0e0f0; font-size: 12px; }
+QComboBox QAbstractItemView { background: #0a0a16; border: 1px solid #2a2a4a; color: #e0e0f0; selection-background-color: #2a2a4a; }</string>
+              </property>
+              <item>
+               <property name="text">
+                <string notr="true">All</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string notr="true">Fabric</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string notr="true">Forge</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string notr="true">Quilt</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string notr="true">NeoForge</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="mrSearchBtn">
+              <property name="text">
+               <string notr="true">Search</string>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>60</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton { background: rgba(162,155,254,0.15); border: 1px solid rgba(162,155,254,0.3); border-radius: 6px; color: #a29bfe; font-size: 12px; font-weight: bold; padding: 4px 12px; }
+QPushButton:hover { background: rgba(162,155,254,0.3); }</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QScrollArea" name="mrResultScroll">
+            <property name="styleSheet">
+             <string notr="true">QScrollArea { background: transparent; border: none; }
+QScrollBar:vertical { background: #0e0e1a; width: 6px; }
+QScrollBar::handle:vertical { background: #3a3a5a; border-radius: 3px; min-height: 30px; }
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical { height: 0; }</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::Shape::NoFrame</enum>
+            </property>
+            <property name="widgetResizable">
+             <bool>true</bool>
+            </property>
+            <widget class="QWidget" name="mrResultContent">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>619</width>
+               <height>200</height>
+              </rect>
+             </property>
+            </widget>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="mrPaginationRow">
+            <item>
+             <widget class="QPushButton" name="mrPrevBtn">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string notr="true">&lt; Prev</string>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton { background: rgba(162,155,254,0.1); border: 1px solid rgba(162,155,254,0.2); border-radius: 4px; color: #a29bfe; font-size: 11px; padding: 4px 10px; }
+QPushButton:hover { background: rgba(162,155,254,0.25); }
+QPushButton:disabled { color: #444; border-color: #222; background: transparent; }</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="mrPageLabel">
+              <property name="styleSheet">
+               <string notr="true">color: #8888aa; font-size: 11px; padding: 0 12px;</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="mrNextBtn">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string notr="true">Next &gt;</string>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton { background: rgba(162,155,254,0.1); border: 1px solid rgba(162,155,254,0.2); border-radius: 4px; color: #a29bfe; font-size: 11px; padding: 4px 10px; }
+QPushButton:hover { background: rgba(162,155,254,0.25); }
+QPushButton:disabled { color: #444; border-color: #222; background: transparent; }</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="btnRow">
+         <item>
+          <widget class="QPushButton" name="installFileBtn">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string notr="true">Install from File</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="conflictCheckBtn">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string notr="true">Check Conflicts</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="scanBtn">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string notr="true">Refresh</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer>
+           <property name="orientation">
+            <enum>Qt::Orientation::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

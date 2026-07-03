@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>JavaPanel</class>
+ <widget class="QWidget" name="JavaPanel">
+  <layout class="QVBoxLayout" name="rootLayout">
+   <property name="leftMargin"><number>0</number></property>
+   <property name="topMargin"><number>0</number></property>
+   <property name="rightMargin"><number>0</number></property>
+   <property name="bottomMargin"><number>0</number></property>
+   <property name="spacing"><number>0</number></property>
+   <item>
+    <widget class="QLabel" name="titleLabel">
+     <property name="styleSheet"><string notr="true">font-size: 22px; font-weight: bold; color: #60a5fa; padding: 12px 20px 8px 20px;</string></property>
+     <property name="text"><string notr="true">Java</string></property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QScrollArea" name="scroll">
+     <property name="frameShape"><enum>QFrame::NoFrame</enum></property>
+     <property name="widgetResizable"><bool>true</bool></property>
+     <property name="styleSheet"><string notr="true">QScrollArea { background: transparent; border: none; }
+QScrollBar:vertical { background: #0e0e1a; width: 8px; }
+QScrollBar::handle:vertical { background: #3a3a5a; border-radius: 4px; }
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical { height: 0; }</string></property>
+     <widget class="QWidget" name="page">
+      <property name="geometry"><rect><x>0</x><y>0</y><width>400</width><height>500</height></rect></property>
+      <layout class="QVBoxLayout" name="pageLayout">
+       <property name="leftMargin"><number>20</number></property>
+       <property name="topMargin"><number>12</number></property>
+       <property name="rightMargin"><number>20</number></property>
+       <property name="bottomMargin"><number>16</number></property>
+       <property name="spacing"><number>16</number></property>
+       <!-- System Java -->
+       <item>
+        <widget class="QGroupBox" name="systemJavaGroup">
+         <property name="styleSheet"><string notr="true">QGroupBox { border: 1px solid #2a2a4a; border-radius: 10px; margin-top: 12px; padding: 20px 16px 12px 16px; font-weight: bold; color: #a29bfe; }
+QGroupBox::title { subcontrol-origin: margin; left: 16px; padding: 0 6px; }</string></property>
+         <property name="title"><string notr="true">System Java</string></property>
+         <layout class="QVBoxLayout" name="systemJavaLayout">
+          <property name="spacing"><number>10</number></property>
+          <item>
+           <layout class="QHBoxLayout" name="topRow">
+            <item>
+             <widget class="QPushButton" name="scanBtn">
+              <property name="objectName"><string>primaryBtn</string></property>
+              <property name="text"><string notr="true">Scan System</string></property>
+              <property name="fixedWidth"><number>140</number></property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="selectedLabel">
+              <property name="styleSheet"><string notr="true">color: #8888aa; font-size: 12px;</string></property>
+              <property name="text"><string notr="true">None selected</string></property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="copyBtn">
+              <property name="objectName"><string>ghostBtn</string></property>
+              <property name="text"><string notr="true">Copy Path</string></property>
+              <property name="fixedWidth"><number>80</number></property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QTableWidget" name="systemJavaTable">
+            <property name="columnCount"><number>4</number></property>
+            <property name="maximumHeight"><number>200</number></property>
+            <property name="alternatingRowColors"><bool>true</bool></property>
+            <property name="showGrid"><bool>false</bool></property>
+            <property name="selectionBehavior"><enum>QAbstractItemView::SelectRows</enum></property>
+            <property name="styleSheet"><string notr="true">QTableWidget { background: #0a0a16; border: 1px solid #2a2a4a; border-radius: 8px; }
+QTableWidget::item { padding: 8px 12px; color: #e0e0f0; }
+QTableWidget::item:alternate { background: rgba(255,255,255,0.02); }
+QHeaderView::section { background: #12121e; color: #8888aa; border: none; padding: 8px 12px; font-size: 11px; font-weight: bold; }</string></property>
+            <attribute name="verticalHeaderVisible"><bool>false</bool></attribute>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <!-- Version Map -->
+       <item>
+        <widget class="QGroupBox" name="versionMapGroup">
+         <property name="styleSheet"><string notr="true">QGroupBox { border: 1px solid #2a2a4a; border-radius: 10px; margin-top: 12px; padding: 20px 16px 12px 16px; font-weight: bold; color: #facc15; }
+QGroupBox::title { subcontrol-origin: margin; left: 16px; padding: 0 6px; }</string></property>
+         <property name="title"><string notr="true">Version Map</string></property>
+         <layout class="QVBoxLayout" name="versionMapLayout">
+          <item>
+           <widget class="QTableWidget" name="versionMapTable">
+            <property name="columnCount"><number>3</number></property>
+            <property name="maximumHeight"><number>280</number></property>
+            <property name="showGrid"><bool>false</bool></property>
+            <property name="selectionMode"><enum>QAbstractItemView::NoSelection</enum></property>
+            <property name="styleSheet"><string notr="true">QTableWidget { background: #0a0a16; border: 1px solid #2a2a4a; border-radius: 8px; }
+QTableWidget::item { padding: 6px 12px; color: #e0e0f0; }
+QHeaderView::section { background: #12121e; color: #8888aa; border: none; padding: 8px 12px; font-size: 11px; font-weight: bold; }</string></property>
+            <attribute name="verticalHeaderVisible"><bool>false</bool></attribute>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <!-- Download -->
+       <item>
+        <widget class="QGroupBox" name="downloadGroup">
+         <property name="styleSheet"><string notr="true">QGroupBox { border: 1px solid #2a2a4a; border-radius: 10px; margin-top: 12px; padding: 20px 16px 12px 16px; font-weight: bold; color: #00d2a0; }
+QGroupBox::title { subcontrol-origin: margin; left: 16px; padding: 0 6px; }</string></property>
+         <property name="title"><string notr="true">Download Java</string></property>
+         <layout class="QVBoxLayout" name="downloadLayout">
+          <property name="spacing"><number>10</number></property>
+          <item>
+           <layout class="QHBoxLayout" name="verRow">
+            <item><widget class="QLabel" name="versionLabel"><property name="text"><string notr="true">Select Version:</string></property></widget></item>
+            <item>
+             <widget class="QComboBox" name="versionCombo">
+              <property name="styleSheet"><string notr="true">QComboBox { background: #0a0a16; border: 1px solid #2a2a4a; border-radius: 6px; color: #e0e0f0; padding: 6px 12px; }
+QComboBox::drop-down { border: none; }
+QComboBox QAbstractItemView { background: #12121e; color: #e0e0f0; }</string></property>
+              <item><property name="text"><string>Java 8</string></property></item>
+              <item><property name="text"><string>Java 11</string></property></item>
+              <item><property name="text"><string>Java 17</string></property></item>
+              <item><property name="text"><string>Java 21</string></property></item>
+              <property name="currentIndex"><number>3</number></property>
+             </widget>
+            </item>
+            <item><spacer><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeHint"><size><width>40</width><height>20</height></size></property></spacer></item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="dirRow">
+            <item><widget class="QLineEdit" name="installDirEdit"><property name="placeholderText"><string notr="true">Install directory...</string></property></widget></item>
+            <item>
+             <widget class="QPushButton" name="browseBtn">
+              <property name="objectName"><string>ghostBtn</string></property>
+              <property name="text"><string notr="true">Browse</string></property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item><widget class="QProgressBar" name="progressBar"><property name="visible"><bool>false</bool></property><property name="maximum"><number>100</number></property></widget></item>
+          <item><widget class="QLabel" name="downloadStatusLabel"><property name="styleSheet"><string notr="true">color: #8888aa; font-size: 12px;</string></property></widget></item>
+          <item>
+           <layout class="QHBoxLayout" name="downloadBtnRow">
+            <item><spacer><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeHint"><size><width>40</width><height>20</height></size></property></spacer></item>
+            <item>
+             <widget class="QPushButton" name="downloadBtn">
+              <property name="objectName"><string>greenBtn</string></property>
+              <property name="text"><string notr="true">Download</string></property>
+              <property name="fixedWidth"><number>180</number></property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item><spacer><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeHint"><size><width>20</width><height>40</height></size></property></spacer></item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
